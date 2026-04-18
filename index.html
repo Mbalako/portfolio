@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhcj8iIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojQThDNUEwIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNUE4QTRGIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I0E4QzVBMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTQiIGZpbGw9InVybCgjcGFpbnQwX2xpbmVhcj8pIiBzdHJva2U9IiNFOEY0RTgiIHN0cm9rZS13aWR0aD0iMiIvPgogIDx0ZXh0IHg9IjE2IiB5PSIyMCIgZm9udC1mYW1pbHk9IlBsYXlmYWlyIERpc3BsYXkiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiMyRDRBNkQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPk1NPC90ZXh0PgogIDxjaXJjbGUgY3g9IjEwIiBjeT0iMTAiIHI9IjEuNSIgZmlsbD0iI0E4QzVBMCIvPgogIDxjaXJjbGUgY3g9IjIyIiBjeT0iMTAiIHI9IjEuNSIgZmlsbD0iI0E4QzVBMCIvPgogIDxwYXRoIGQ9Ik0xMiAyNCBRMTYgMjYgMjAgMjQiIHN0cm9rZT0iIzVBOEE0Rkiic3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPgo8L3N2Zz4=" sizes="32x32" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ░░ CURSOR ░░ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ░░ LOADER ░░ -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <svg class="leaf-loader" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 10 C40 10 70 20 70 50 C70 65 55 72 40 72 C25 72 10 65 10 50 C10 20 40 10 40 10Z" stroke="#A8C5A0" stroke-width="2" fill="none" stroke-dasharray="200" stroke-dashoffset="200">
+          <animate attributeName="stroke-dashoffset" from="200" to="0" dur="1.5s" fill="freeze" />
+        </path>
+        <line x1="40" y1="72" x2="40" y2="40" stroke="#A8C5A0" stroke-width="1.5" opacity="0">
+          <animate attributeName="opacity" from="0" to="1" begin="1s" dur="0.5s" fill="freeze" />
+        </line>
+      </svg>
+      <p class="loader-text">Maxwell Mbalako</p>
+    </div>
+  </div>
+
+  <!-- ░░ NAV ░░ -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav-logo">M<span>.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ░░ HERO ░░ -->
+  <section class="hero" id="hero">
+    <!-- Organic background blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <!-- Floating leaves -->
+    <div class="leaf leaf-1">🌿</div>
+    <div class="leaf leaf-2">🍃</div>
+    <div class="leaf leaf-3">🌱</div>
+    <div class="leaf leaf-4">🍀</div>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <span class="hero-eyebrow reveal">Hello, I'm</span>
+        <h1 class="hero-name reveal">Maxwell<br /><em>Mbalako</em></h1>
+        <div class="hero-role reveal">
+          <span class="role-static">I am a </span>
+          <span class="role-typed" id="typedText"></span><span class="cursor-blink">|</span>
+        </div>
+        <p class="hero-tagline reveal">
+          Crafting clean, living digital experiences — one line of code at a time.
+        </p>
+        <div class="hero-cta reveal">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-outline">Say Hello</a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap reveal">
+        <!-- ============================================
+             PROFILE IMAGE PLACEHOLDER
+             Replace the .profile-placeholder div with:
+             <img src="your-photo.jpg" class="profile-img" alt="Maxwell Mbalako" />
+             ============================================ -->
+        <img src="images/temp.png" class="profile-img" alt="Maxwell Mbalako" />
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ░░ ABOUT ░░ -->
+  <section class="about section" id="about">
+    <div class="section-bg-text">ABOUT</div>
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left">
+          <span class="section-label reveal">— Who I Am</span>
+          <h2 class="section-title reveal">Rooted in <em>curiosity</em>,<br />growing in <em>code</em></h2>
+          <div class="about-decoration">
+            <svg viewBox="0 0 200 200" class="organic-shape">
+              <path d="M100,20 C140,20 175,50 175,90 C175,130 155,165 115,175 C75,185 30,165 15,125 C0,85 20,40 60,25 C73,20 87,20 100,20Z" fill="#E8F4E8" />
+            </svg>
+            <span class="shape-emoji">🌳</span>
+          </div>
+        </div>
+        <div class="about-right">
+          <p class="about-para reveal">
+            I am a passionate <strong>Computer Science student</strong> with an insatiable drive for technology and web development. I am constantly growing — building a strong foundation while stretching toward new horizons.
+          </p>
+          <p class="about-para reveal">
+            I believe in creating digital experiences that are not just functional, but <strong>beautifully alive</strong> — clean, purposeful, and human-centered. Every project is a new seedling, nurtured with care and intention.
+          </p>
+          <p class="about-para reveal">
+            I am currently sharpening my craft as a web developer. Been motivated by <strong>problem-solving, creative thinking</strong>, and the endless possibilities that technology offers. Am open to collaborations, internships, and exciting opportunities in the tech space to help me grow and contribute meaningfully.
+          </p>
+          <div class="about-contact-chips reveal">
+            <a href="mailto:maxwellmbalako37@gmail.com" class="chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
+              maxwellmbalako37@gmail.com
+            </a>
+            <a href="tel:+260777893975" class="chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +260 777 893 975
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ SKILLS ░░ -->
+  <section class="skills section" id="skills">
+    <div class="section-bg-text">SKILLS</div>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal">— What I Know</span>
+        <h2 class="section-title reveal">Growing <em>expertise</em>,<br />branching out daily</h2>
+      </div>
+
+      <div class="skills-grid">
+        <!-- HTML -->
+        <div class="skill-card reveal">
+          <div class="skill-icon">
+            <svg viewBox="0 0 40 40" fill="none">
+              <text x="8" y="28" font-size="22" fill="#E44D26" font-weight="bold">&lt;/&gt;</text>
+            </svg>
+          </div>
+          <div class="skill-info">
+            <div class="skill-top">
+              <span class="skill-name">HTML5</span>
+              <span class="skill-pct" data-target="89">0%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-bar" data-width="89"></div>
+            </div>
+            <p class="skill-desc">Solid semantic structure, accessibility-aware markup and modern HTML5 APIs.</p>
+          </div>
+        </div>
+
+        <!-- CSS -->
+        <div class="skill-card reveal">
+          <div class="skill-icon">
+            <svg viewBox="0 0 40 40" fill="none">
+              <text x="6" y="28" font-size="18" fill="#264DE4" font-weight="bold">CSS</text>
+            </svg>
+          </div>
+          <div class="skill-info">
+            <div class="skill-top">
+              <span class="skill-name">CSS3</span>
+              <span class="skill-pct" data-target="75">0%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-bar" data-width="75"></div>
+            </div>
+            <p class="skill-desc">Responsive layouts, Flexbox, Grid, animations and modern visual design patterns.</p>
+          </div>
+        </div>
+
+        <!-- JS -->
+        <div class="skill-card reveal">
+          <div class="skill-icon">
+            <svg viewBox="0 0 40 40" fill="none">
+              <text x="6" y="28" font-size="16" fill="#F7DF1E" font-weight="bold" stroke="#333" stroke-width="0.3">JS</text>
+            </svg>
+          </div>
+          <div class="skill-info">
+            <div class="skill-top">
+              <span class="skill-name">JavaScript</span>
+              <span class="skill-pct" data-target="67">0%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-bar" data-width="67"></div>
+            </div>
+            <p class="skill-desc">Understanding of core syntax, DOM manipulation, events and programming flow.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nature growth metaphor -->
+      <div class="skills-footer reveal">
+        <div class="growth-line">
+          <span class="growth-emoji">🌱</span>
+          <div class="growth-track"><div class="growth-fill"></div></div>
+          <span class="growth-emoji">🌳</span>
+        </div>
+        <p class="growth-caption">Always learning, always growing</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ PROJECTS ░░ -->
+  <section class="projects section" id="projects">
+    <div class="section-bg-text">WORK</div>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal">— My Work</span>
+        <h2 class="section-title reveal">Seeds becoming <em>forests</em></h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- ============================================
+             ADD NEW PROJECT CARDS HERE
+             Copy the .project-card block below and paste it
+             Fill in: title, description, tags, demo link, code link
+             ============================================ -->
+
+        <article class="project-card reveal">
+          <div class="project-img-placeholder">
+            <span class="project-img-icon">🖼️</span>
+            <span class="project-img-label">Project Screenshot</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <h3 class="project-title">Project Title One</h3>
+            <p class="project-desc">A brief description of this project will go here. What problem does it solve? What did you build and why?</p>
+            <div class="project-links">
+              <a href="#" class="btn-sm btn-primary">Live Demo ↗</a>
+              <a href="#" class="btn-sm btn-ghost">View Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-img-placeholder">
+            <span class="project-img-icon">🖼️</span>
+            <span class="project-img-label">Project Screenshot</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+            <h3 class="project-title">Project Title Two</h3>
+            <p class="project-desc">A brief description of this project will go here. What problem does it solve? What did you build and why?</p>
+            <div class="project-links">
+              <a href="#" class="btn-sm btn-primary">Live Demo ↗</a>
+              <a href="#" class="btn-sm btn-ghost">View Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-img-placeholder">
+            <span class="project-img-icon">🖼️</span>
+            <span class="project-img-label">Project Screenshot</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">HTML</span>
+            </div>
+            <h3 class="project-title">Project Title Three</h3>
+            <p class="project-desc">A brief description of this project will go here. What problem does it solve? What did you build and why?</p>
+            <div class="project-links">
+              <a href="#" class="btn-sm btn-primary">Live Demo ↗</a>
+              <a href="#" class="btn-sm btn-ghost">View Code</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ CONTACT ░░ -->
+  <section class="contact section" id="contact">
+    <div class="section-bg-text">HELLO</div>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal">— Get In Touch</span>
+        <h2 class="section-title reveal">Let's grow<br /><em>something together</em></h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="contact-intro reveal">
+            Have an opportunity, a collaboration idea, or just want to say hi? My inbox is always open and I'd love to hear from you.
+          </p>
+          <div class="contact-cards reveal">
+            <div class="contact-card">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
+              </div>
+              <div>
+                <span class="contact-label">Email</span>
+                <a href="mailto:maxwellmbalako37@gmail.com" class="contact-value">maxwellmbalako37@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <span class="contact-label">Phone</span>
+                <a href="tel:+260777893975" class="contact-value">+260 777 893 975</a>
+                <a href="tel:+260760267218" class="contact-value">+260 760 267 218</a>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <span class="contact-label">Location</span>
+                <span class="contact-value">Lusaka, Zambia 🇿🇲</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            Send Message 🌿
+          </button>
+          <p class="form-note">I'll get back to you within 24–48 hours.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer class="footer">
+    <div class="footer-leaves">
+      <span>🍃</span><span>🌿</span><span>🌱</span><span>🍀</span><span>🌿</span>
+    </div>
+    <div class="container footer-inner">
+      <a href="#hero" class="footer-logo">Maxwell<span>.</span></a>
+      <p class="footer-tagline">Rooted in passion. Growing through code.</p>
+      <div class="footer-socials">
+        <!-- Replace href="#" with your actual social links -->
+        <a href="#" class="social-link" aria-label="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="#" class="social-link" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="#" class="social-link" aria-label="Twitter">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+      </div>
+      <p class="footer-copy">Designed & Built by Maxwell Mbalako &copy; 2026. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
